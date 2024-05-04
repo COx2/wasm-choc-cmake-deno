@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.16)
 
-project(juce-wasm-build-cmake)
+project(wasm-choc-cmake-deno)
 
 #This is temporarily needed due to a bug in Xcode 15:
 if (CMAKE_CXX_COMPILER_ID MATCHES "AppleClang")
@@ -44,10 +44,6 @@ set(CMAKE_MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>")
 if(CMAKE_CXX_COMPILER_ID MATCHES "MSVC")
   add_compile_options(/utf-8)
 endif()
-
-# Specify the installation folder
-set(CMAKE_INSTALL_PREFIX ${CMAKE_CURRENT_SOURCE_DIR}/outputs)
-message(STATUS "CMAKE_INSTALL_PREFIX: ${CMAKE_INSTALL_PREFIX}")
 
 # Add wasm module projects
 add_subdirectory(WasmModules)
