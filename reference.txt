@@ -1,1 +1,2 @@
 https://stunlock.gg/posts/emscripten_with_cmake/
+https://gist.github.com/yeputons/8591cc26cc1b61d3503b0cb3b4623001

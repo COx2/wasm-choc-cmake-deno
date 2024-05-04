@@ -1,6 +1,4 @@
-#include <string>
-
 extern "C" 
 {
-    std::string getPlatformName();
+    // const char* getPlatformName();
 }

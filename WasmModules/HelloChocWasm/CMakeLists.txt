@@ -12,16 +12,17 @@ if (DEFINED EMSCRIPTEN)
     set(CMAKE_EXECUTABLE_SUFFIX ".wasm")
 
     set_target_properties(${BaseTargetName} PROPERTIES COMPILE_FLAGS "-Os -s SIDE_MODULE=1 ")
-    set_target_properties(${BaseTargetName} PROPERTIES LINK_FLAGS    "-Os -s WASM=1 -s SIDE_MODULE=1 -s STANDALONE_WASM --no-entry")
+    set_target_properties(${BaseTargetName} PROPERTIES LINK_FLAGS    "-Os -s MODULARIZE=1 -s WASM=1 -s SIDE_MODULE=1 -s STANDALONE_WASM --no-entry")
 else()
     add_library(${BaseTargetName} SHARED calc.cpp)
 endif()
 
 target_sources(${BaseTargetName}
     PRIVATE
-        Source/Main.cpp
-        Source/Calc.cpp
-        Source/Calc.h)
+        # Source/Main.cpp
+        # Source/Calc.cpp
+        # Source/Calc.h
+        Source/ChocBinder.cpp)
 
 target_compile_features(${BaseTargetName}
     PUBLIC
