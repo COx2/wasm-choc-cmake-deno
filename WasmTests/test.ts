@@ -4,7 +4,7 @@ console.log(Deno.cwd());
 
 const __file_directory = fromFileUrl(new URL("./", import.meta.url));
 
-const wasmCode = await Deno.readFile(__file_directory + "/HelloChocWasm.wasm");
+const wasmCode = await Deno.readFile(__file_directory + "HelloChocWasm.wasm");
 
 const wasmModule = new WebAssembly.Module(wasmCode);
 
