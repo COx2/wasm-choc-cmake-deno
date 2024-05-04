@@ -1,0 +1,66 @@
+{
+    "version": 3,
+    "cmakeMinimumRequired": {
+        "major": 3,
+        "minor": 21,
+        "patch": 0
+    },
+    "configurePresets": [
+        {
+            "name": "base",
+            "hidden": true,
+            "binaryDir": "${sourceDir}/builds/${presetName}",
+            "generator": "Ninja Multi-Config",
+            "cacheVariables": {
+                "CMAKE_EXPORT_COMPILE_COMMANDS": {
+                    "type": "BOOL",
+                    "value": true
+                },
+                "CMAKE_POSITION_INDEPENDENT_CODE": {
+                    "type": "BOOL",
+                    "value": true
+                }
+            }
+        },
+        {
+            "name": "ninja-multi",
+            "displayName": "Ninja Multi-Config",
+            "description": "Default build using Ninja Multi-Config generator",
+            "inherits": [
+                "base"
+            ],
+            "cacheVariables": {
+                "CMAKE_TOOLCHAIN_FILE": {
+                    "type": "PATH",
+                    "value": "${sourceDir}/External/emsdk/upstream/emscripten/cmake/Modules/Platform/Emscripten.cmake"
+                },
+                "CMAKE_MAKE_PROGRAM": {
+                    "type": "PATH",
+                    "value": "${sourceDir}/Ninja/ninja.exe"
+                }
+            }
+        }
+    ],
+    "buildPresets": [
+        {
+            "name": "base",
+            "hidden": true,
+            "targets":[
+            ]
+        },
+        {
+            "name": "ninja-debug",
+            "description": "Build using Ninja for Debug",
+            "configurePreset": "ninja-multi",
+            "configuration": "Debug",
+            "inherits": "base"
+        },
+        {
+            "name": "ninja-release",
+            "description": "Build using Ninja for Release",
+            "configurePreset": "ninja-multi",
+            "configuration": "Release",
+            "inherits": "base"
+        }
+    ]
+}
