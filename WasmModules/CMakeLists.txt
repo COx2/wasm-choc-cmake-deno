@@ -1,1 +1,1 @@
-add_subdirectory(HelloChocWasm)
+add_subdirectory(choc-emscripten)
