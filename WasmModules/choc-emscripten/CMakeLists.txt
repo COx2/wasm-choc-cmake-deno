@@ -19,14 +19,14 @@ target_compile_options(${BaseTargetName}
         "SHELL:-s SINGLE_FILE=1" 
         "SHELL:-s ASSERTIONS=2")
 
-# target_link_options(${BaseTargetName} 
-#     PRIVATE 
-#         -Os --bind 
-#         "SHELL:-s WASM=1" 
-#         "SHELL:-s MODULARIZE=1" 
-#         "SHELL:-s EXPORT_ES6=1" 
-#         "SHELL:-s SINGLE_FILE=1" 
-#         "SHELL:-s ASSERTIONS=2")
+target_link_options(${BaseTargetName} 
+    PRIVATE 
+        -Os --bind 
+        "SHELL:-s WASM=1" 
+        "SHELL:-s MODULARIZE=1" 
+        "SHELL:-s EXPORT_ES6=1" 
+        "SHELL:-s SINGLE_FILE=1" 
+        "SHELL:-s ASSERTIONS=2")
 
 target_sources(${BaseTargetName}
     PRIVATE
