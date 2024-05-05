@@ -8,10 +8,10 @@ Research project.
 
 In general, having a setup that allows building emsdk should be sufficient.
 
-+ Ninja-build: 1.11 or later
-+ CMake: 3.25 or later
-+ Git: 2.3 or later
-+ Deno: 1.42 or later
++ Git: 2.3 or later - Refer to: [Git](https://git-scm.com/)
++ Deno: 1.42 or later - Refer to: [Deno](https://deno.com/)
++ CMake: 3.25 or later - Refer to: [CMake](https://cmake.org/)
++ Ninja-build: 1.11 or later - Refer to: [Ninja](https://ninja-build.org/)
 
 ### Run build scripts
 
