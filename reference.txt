@@ -1,2 +1,6 @@
 https://stunlock.gg/posts/emscripten_with_cmake/
 https://gist.github.com/yeputons/8591cc26cc1b61d3503b0cb3b4623001
+https://web.dev/articles/embind?hl=ja
+https://emscripten.org/docs/tools_reference/settings_reference.html?highlight=environment
+https://jumble-note.blogspot.com/2022/06/cwasm-emscripten.html
+https://zenn.dev/nyatlan/articles/614421064965d5
