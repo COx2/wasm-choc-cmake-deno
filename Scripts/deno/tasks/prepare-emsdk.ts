@@ -13,7 +13,7 @@ import { fromFileUrl } from "https://deno.land/std/path/mod.ts";
 export async function prepareEmsdk() {
     console.log("Deno.cwd(): " + Deno.cwd());
 
-    const __root_directory = fromFileUrl(new URL("../../", import.meta.url));
+    const __root_directory = fromFileUrl(new URL("../../../", import.meta.url));
     Deno.chdir(__root_directory);
 
     console.log("Deno.cwd(): " + Deno.cwd());
