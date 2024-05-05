@@ -43,6 +43,3 @@ export async function prepareEmsdk() {
         await $`./emsdk activate latest`;
     }
 }
-
-//============================================
-await prepareEmsdk();
