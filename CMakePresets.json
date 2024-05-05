@@ -33,10 +33,6 @@
                 "CMAKE_TOOLCHAIN_FILE": {
                     "type": "PATH",
                     "value": "${sourceDir}/External/emsdk/upstream/emscripten/cmake/Modules/Platform/Emscripten.cmake"
-                },
-                "CMAKE_MAKE_PROGRAM": {
-                    "type": "PATH",
-                    "value": "${sourceDir}/Ninja/ninja.exe"
                 }
             }
         }
