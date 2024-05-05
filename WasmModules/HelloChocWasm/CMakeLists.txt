@@ -19,10 +19,7 @@ endif()
 
 target_sources(${BaseTargetName}
     PRIVATE
-        # Source/Main.cpp
-        # Source/Calc.cpp
-        # Source/Calc.h
-        Source/ChocBinder.cpp)
+        Source/EmscriptenBinding.cpp)
 
 target_compile_features(${BaseTargetName}
     PUBLIC
