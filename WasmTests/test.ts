@@ -10,3 +10,4 @@ const moduleInstance = await Module({
 console.log(moduleInstance.getChocPlatformName());
 console.log(moduleInstance.getStringFromCpp());
 console.log(moduleInstance.lerp(1, 2, 100));
+console.log(moduleInstance.getMP3AudioFileSuffixes());
