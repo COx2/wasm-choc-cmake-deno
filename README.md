@@ -36,7 +36,7 @@ https://deno.com/
 
 Deno:
 ```sh
-deno run --allow-all ./WasmTests/test.ts
+deno run --allow-all ./WasmTests/deno/test.ts
 ```
 
 ## Attention Regarding Licenses

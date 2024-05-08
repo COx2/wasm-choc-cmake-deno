@@ -12,7 +12,7 @@ add_executable(${BaseTargetName})
 
 target_compile_options(${BaseTargetName} 
     PRIVATE 
-        -Os --bind 
+        -O0 --bind 
         "SHELL:-s WASM=1" 
         "SHELL:-s MODULARIZE=1" 
         "SHELL:-s EXPORT_ES6=1" 
@@ -21,7 +21,7 @@ target_compile_options(${BaseTargetName}
 
 target_link_options(${BaseTargetName} 
     PRIVATE 
-        -Os --bind 
+        -O0 --bind 
         "SHELL:-s WASM=1" 
         "SHELL:-s MODULARIZE=1" 
         "SHELL:-s EXPORT_ES6=1" 
@@ -50,6 +50,6 @@ if(TARGET ${BaseTargetName})
     message("WASM_PRODUCT_FILE: ${WASM_PRODUCT_FILE}")
 
     install(FILES "${WASM_PRODUCT_FILE}"
-            DESTINATION "${CMAKE_CURRENT_SOURCE_DIR}/../../WasmTests"
+            DESTINATION "${CMAKE_CURRENT_SOURCE_DIR}/../../WasmTests/lib"
             COMPONENT ${BaseTargetName})
 endif()

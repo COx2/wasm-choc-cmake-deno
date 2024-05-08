@@ -1,5 +1,5 @@
 import "jsr:/@kitsonk/xhr";
-import Module from "./choc-emscripten.js";
+import Module from "../lib/choc-emscripten.js";
 
 const moduleInstance = await Module({
     onRuntimeInitialized() {
